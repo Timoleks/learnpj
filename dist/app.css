@@ -1,0 +1,43 @@
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0; }
+
+.header {
+  display: flex;
+  justify-content: center; }
+  .header-nav_container {
+    max-width: 100%;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; }
+  .header-nav_title-text {
+    font-size: 42px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  .header-nav_items {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end; }
+  .header-nav_item {
+    margin-left: 20px;
+    color: #6c6c6c;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  .header-nav_title {
+    display: flex;
+    align-items: center; }
+  .header-nav_title-title {
+    width: 44px;
+    height: 44px;
+    background: #4f95f3;
+    border-radius: 50%;
+    margin-right: 5px; }
+  .header-nav_title-title-img {
+    width: 21px;
+    height: 18px; }
+
+
+/*# sourceMappingURL=app.css.map*/
