@@ -41,6 +41,9 @@ body {
     }
 
     &-nav_title-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 44px;
         height: 44px;
         background: rgb(79, 149, 243);
@@ -49,7 +52,6 @@ body {
     }
 
     &-nav_title-title-img {
-        background: url('../src/img/img1.png') center no-repeat;
         width: 21px;
         height: 18px;
     }

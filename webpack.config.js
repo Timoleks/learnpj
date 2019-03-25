@@ -1,5 +1,6 @@
 let path = require('path');
 let MiniCssExtractPlugin = require('mini-css-extract-plugin');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
 
 let conf = {
     entry: {
@@ -9,7 +10,7 @@ let conf = {
     output: {
         path: path.resolve(__dirname,'./dist'),
         filename: '[name].js',
-        publicPath: 'dist/'
+        //publicPath: 'dist/'
     },
     devtool: 'source-map',
     module : {
@@ -37,12 +38,7 @@ let conf = {
                         // options: { sourceMap: true}
                     },
                     {
-                        loader: "sass-loader",
-                        options: {
-                            data: '@import "utils";',
-                            includePaths: [styleUtils],
-                            sourceMap: true
-                        }
+                        loader: "sass-loader"
                     }
                 ]
             },
@@ -51,20 +47,25 @@ let conf = {
                 test: /\.(png|jpg|gif)$/,
                 use: [
                     {
-                        loader: 'file-loader',
-                        query: {
-                            name: '[name].[ext]',
-                            outputPath: './img/'
-                        }
+                        loader: 'file-loader'
                     }
                 ]
+            },
+
+            {
+                test: /\.html$/,
+                use: ['html-loader']
             }
+        
         ]
     },
 
     plugins: [
         new MiniCssExtractPlugin({
           filename: "[name].css"
+        }),
+        new HtmlWebpackPlugin({
+            template: 'index.html'
         })
       ],
     

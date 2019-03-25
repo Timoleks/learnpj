@@ -30,6 +30,9 @@ body {
     display: flex;
     align-items: center; }
   .header-nav_title-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
     background: #4f95f3;
