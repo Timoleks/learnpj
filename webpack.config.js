@@ -47,7 +47,11 @@ let conf = {
                 test: /\.(png|jpg|gif)$/,
                 use: [
                     {
-                        loader: 'file-loader'
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'img/'
+                        }
                     }
                 ]
             },
@@ -65,6 +69,7 @@ let conf = {
           filename: "[name].css"
         }),
         new HtmlWebpackPlugin({
+           // filename: 'index.html',
             template: 'index.html'
         })
       ],
