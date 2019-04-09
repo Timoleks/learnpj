@@ -1,5 +1,7 @@
 $light-blue: #5094f2;
 
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 body {
     display: flex;
     flex-direction: column;
@@ -81,13 +83,14 @@ body {
 .main {
    width: 100%;
    
-   &_container {
+   &__container {
        display: flex;
        flex-direction: column;
        align-items: center;
     }
     
-    &_container_container-one {
+}
+    .banner__container {
        display: flex;
        justify-content: center;
        align-items: center;   
@@ -96,14 +99,189 @@ body {
        background: url('../img/banner-bg-pc.png') no-repeat center;
        background-size: cover;
        
-       &_container-iphone {
-           width: 345px;
-           height: 436px;
-       }
+    }
 
-       &_container-one-text {
-           width: 400px;
-           
-       }
-   }
-}
+       .banner__item {
+          margin-left: 104px;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          color:white;
+
+          &__title {
+              font-size: 42px;
+          }
+   
+          &__text {
+              display: flex;
+              flex-direction: column;
+              margin-top: 10px;
+              font-size: 26px;
+              font-family: 'Raleway', sans-serif;
+          }
+          
+          &__text span {
+              margin-top: 10px;
+          }
+
+          &__button {
+              display: flex;
+              margin-top: 42px;
+              width: 175px;
+              height: 40px;
+              background: $light-blue;
+              align-items: center;
+              border:none;
+              
+              &__shape {
+                width: 23px;
+                height: 23px;
+                margin-left: 2px;
+              }
+
+              &__text {
+                margin-left: 10px;
+                font-family: 'Raleway',sans-serif;
+                font-size: 22px;
+                color: white;
+                white-space: nowrap;
+              }
+
+              &:hover {
+                text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+                transition: all 0.4s ease 0s;
+                box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+              }
+          }
+        
+        
+         
+
+       } 
+    
+    
+    .product__container {
+        width: 100%;
+        margin-top: 75px;
+    }
+
+    .product__items {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .product__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__title {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            margin-top: 30px;
+            color: $light-blue;
+        }
+
+        &__text {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        &__img {
+            border-radius: 50%;
+            width: 186px;
+            height: 186px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .blue {
+            background: rgb(79, 149, 243);
+        }
+
+        .red {
+            background: #d94748;
+        }
+
+        .yellow {
+            background: #ebbb11;
+        }
+    }
+
+
+    .shopping__container {
+        width: 100%;
+        margin-top: 95px;
+    }
+
+    .shopping__items {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .shopping__cart {
+        display: flex;
+        flex-direction: column;
+
+        &__title {
+            display: flex;
+            justify-content: center;
+            font-family: 'Raleway', sans-serif;
+            font-size: 42px;
+
+        }
+
+        & img {
+            margin-top: 30px;
+        }
+    }
+
+    .shopping__info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 55px;
+
+
+        &__title {
+            font-size: 26px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        &__text {
+            width: 460px;
+            margin-top: 25px;
+            line-height: 2;
+            font-family: 'Raleway',sans-serif;
+        }
+    }
+
+    footer {
+        width: 100%;
+        padding: 40px 0 40px 0;
+        border-top:1px solid silver;
+        margin-top: 60px;  
+    }
+
+    footer span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+
+    @media screen and (max-width: 640px) {
+        .header-nav_title-text {
+            font-size: 49px;
+        }
+
+        .header-nav_items {
+            text-decoration: none;
+
+        }
+    }
+
+   
+   
+

@@ -51,6 +51,7 @@ let conf = {
                         options: {
                             name: '[name].[ext]',
                             outputPath: 'img/'
+                           
                         }
                     }
                 ]
